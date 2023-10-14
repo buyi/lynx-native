@@ -10,5 +10,5 @@ do
     input_file=$ROOT_LYNX_JAVA_PATH$line
     output_file=$LYNX_OUTPUT_DIR$jni_file_name
     python $LYNX_GEN_FILE $input_file $output_file
-echo "python $LYNX_GEN_FILE $input_file $output_file"
+echo "python3 $LYNX_GEN_FILE $input_file $output_file"
 done < $CURRENT_PATH"/jni_files"

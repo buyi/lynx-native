@@ -1416,7 +1416,7 @@ def GenerateJNIHeader(input_file, output_file, options):
       jni_from_java_source = JNIFromJavaSource.CreateFromFile(
           input_file, options)
       content = jni_from_java_source.GetContent()
-  except ParseError, e:
+  except (ParseError, e):
     print e
     sys.exit(1)
   if output_file:
