@@ -18,7 +18,7 @@ void TraceWriter::Start() {
   std::ostringstream file_path;
   file_path << "/sdcard/"<<"trace_"<<CurrentTimeMillis()<<".log";
 
-  fd_ = open(file_path.str().c_str(), O_CREAT | O_RDWR);
+  fd_ = open(file_path.str().c_str(), 0);
 
   DCHECK(fd_ != -1) << "trace file open failed: " << file_path.str();
 }
